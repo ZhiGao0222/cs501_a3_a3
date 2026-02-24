@@ -3,35 +3,17 @@
 ## Description
 This project implements a dynamic "Tag Browser" screen using Jetpack Compose. It specifically focuses on mastering the `FlowRow` and `FlowColumn` layouts to create a responsive interface where elements wrap and stack intelligently based on content and screen constraints.
 
-## Requirements Met
+## Key Features
 
-### 1. Flow Layout Usage (12 Points)
-- **`FlowRow` Implementation**: Used for the "Selected Tags" area and the main "Technology/Design/Topics" browser sections. Chips automatically wrap to the next line when they exceed the screen width, ensuring no horizontal overflow.
-- **`FlowColumn` Implementation**: Used for the "Sort & Filter" controls. By setting `maxItemsInEachColumn = 3`, the layout forces items to stack vertically into columns and then wrap horizontally, creating a distinct multi-column filter grid.
-- **Adaptive State**: The "Selected Tags" area updates in real-time as the user interacts with the browser below, demonstrating efficient state management with `mutableStateListOf`.
-
-### 2. Interaction & Visual States (6 Points)
-- **Selection Logic**: Tapping a chip in the browser toggles its selection state; selected chips appear in the top area and can be removed by tapping them again or clicking the "Close" icon.
-- **Visual Feedback**: Chips change visual state when selected, including a change in background container color and the appearance of a `Check` icon to indicate the active state.
-- **Reset Action**: An `IconButton` with the `Refresh` icon in the `TopAppBar` allows users to clear all selected tags at once, resetting the UI.
-
-### 3. Modifier Techniques & Responsiveness (5 Points)
-- **`Arrangement.spacedBy(8.dp)`**: Applied consistently to both horizontal and vertical axes within flow layouts to maintain a uniform and professional grid spacing between chips.
-- **`fillMaxWidth()` & `padding()`**: Ensures the layout is responsive and looks balanced across various device screen sizes and orientations.
-- **Stability Constraint**: The `FlowColumn` is wrapped in a height-constrained `Box` (140.dp) to prevent measurement crashes within the `verticalScroll` container, satisfying both technical stability and rubric requirements.
-
-### 4. Material 3 Components
-Integrated 6+ Material 3 components to ensure a high-quality visual polish:
-- `Scaffold` & `TopAppBar` (Center Aligned)
-- `FilterChip` (Primary interaction component)
-- `InputChip` (For removable selected items)
-- `Card` (To group and elevate sections)
-- `HorizontalDivider` (For visual hierarchy)
-- `Button` (Search action with icon)
+* **Dynamic Flow Layouts**: Implementation of `FlowRow` for responsive tag wrapping and `FlowColumn` with `maxItemsInEachColumn = 3` to create a structured vertical-to-horizontal filter grid.
+* **Material 3 Interface**: Full utilization of M3 components including `Scaffold`, `CenterAlignedTopAppBar`, `FilterChip`, `InputChip`, `Card`, and `HorizontalDivider` for a modern, polished aesthetic.
+* **Real-time State Management**: Uses `mutableStateListOf` to synchronize selections between the browser sections and the "Selected Tags" area, providing instant visual feedback upon user interaction.
+* **Responsive Spacing**: Leverages `Arrangement.spacedBy(8.dp)` and `Modifier.padding()` to maintain consistent, adaptive gutter spacing across various screen orientations.
+* **Layout Stability**: Employs a height-constrained `Box` wrapper for `FlowColumn` to ensure compatibility with `verticalScroll` modifiers and prevent measurement intrinsic crashes.
 
 ## Screenshots
 ![Tag Browser Screenshot](screenshot3.png)
-*(Note: Please ensure your screenshot is named screenshot3.png in the repository)*
+*(Note: Please ensure your screenshot is named screenshot3.png in the repository to match this link)*
 
 ## AI Disclosure (2 Points)
 I used Google's Gemini AI to assist with layout debugging and rubric compliance:
