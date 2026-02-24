@@ -14,8 +14,9 @@ This project implements a dynamic "Tag Browser" screen using Jetpack Compose. It
 ## Screenshots
 ![Tag Browser Screenshot](screenshot3.png)
 
-## AI Disclosure (2 Points)
+## AI Disclosure
 I used Google's Gemini AI to assist with layout debugging and rubric compliance:
 1. **Layout Stability**: AI identified that placing a `FlowColumn` directly inside a `verticalScroll` Column causes a `MeasuringIntrinsics` crash. AI suggested providing fixed height constraints to the `FlowColumn` to resolve the measurement conflict.
 2. **Component Usage**: AI helped distinguish between `FilterChip` (for general browsing) and `InputChip` (for selected items with trailing icons) to better align with Material 3 design patterns.
 3. **Rubric Verification**: AI cross-checked the code to ensure that `Arrangement.spacedBy`, `FlowRow`, and `FlowColumn` were all explicitly utilized to meet the assignment's technical requirements.
+4. Readme
