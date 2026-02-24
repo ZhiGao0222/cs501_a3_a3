@@ -13,7 +13,6 @@ This project implements a dynamic "Tag Browser" screen using Jetpack Compose. It
 
 ## Screenshots
 ![Tag Browser Screenshot](screenshot3.png)
-*(Note: Please ensure your screenshot is named screenshot3.png in the repository to match this link)*
 
 ## AI Disclosure (2 Points)
 I used Google's Gemini AI to assist with layout debugging and rubric compliance:
